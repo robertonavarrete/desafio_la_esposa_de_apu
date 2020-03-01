@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @baby.name %>
+  <br>
+  <strong>Veces hoy:</strong>
+  <%= @baby.feeding_times_today %>
+  <br>
+  <strong>Ultima vez:</strong>
+  <%= time_ago_in_words(@baby.breastfeedings.last.created_at) %>
+</p>
+
+<%= link_to 'Edit', edit_baby_path(@baby) %> |
+<%= link_to 'Back', babies_path %>
